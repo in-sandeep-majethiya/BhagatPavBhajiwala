@@ -147,22 +147,25 @@ $(function () {
         e.preventDefault();
 
         $this = $(this);
-
+        if($('#ContactName').val()!='' && $('#ContactEmail').val()!='' && $('#ContactMessage').val()!=''){
         $.ajax({
             type: "POST",
-            url: 'contact.php',
+            url: 'http://www.bhagatpavbhajiwala.com/contact.php',
             dataType: 'json',
             cache: false,
             data: $('#contact').serialize(),
-            success: function (data) {
+            success: function (data) {                
                 if (data.info != 'error') {
                     $this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
-                    $('#msg').hide().removeClass('success').removeClass('error').addClass('success').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
+                    $('#msg').hide().removeClass('success').removeClass('error').addClass('success').html(data.msg + "<i></i>").fadeIn('slow').delay(10000).fadeOut('slow');
                 } else {
-                    $('#msg').hide().removeClass('success').removeClass('error').addClass('error').html(data.msg + "<i></i>").fadeIn('slow').delay(5000).fadeOut('slow');
+                    $('#msg').hide().removeClass('success').removeClass('error').addClass('error').html(data.msg + "<i></i>").fadeIn('slow').delay(10000).fadeOut('slow');
                 }
             }
         });
+        }else{
+            $('#msg').hide().removeClass('success').removeClass('error').addClass('success').html("all fields required " + "<i></i>").fadeIn('slow').delay(10000).fadeOut('slow');
+        }
     });
 
 
