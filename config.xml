@@ -41,8 +41,7 @@
     
     <gap:platform name="android" />
     <gap:platform name="ios" />
-    <preference name="phonegap-version" value="cli-5.2.0" />
-    <preference name="android-minSdkVersion" value="7" />   
+    <preference name="phonegap-version" value="cli-5.2.0" />    
     <preference name="SplashScreen" value="screen"/>
     <preference name="SplashScreenDelay" value="10000" />    
     
