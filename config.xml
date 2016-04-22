@@ -3,14 +3,16 @@
     version="0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Bhagat Pavbhajiwala</name>
     <description>
-        Pav bhaji is more than a mere snack! it’s a quick meal that can be grabbed on the go – since large potions of the bhaji are made in advance and simply reheated with a few spices before serving.
+        Pav bhaji is more than a mere snack!
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Bhagat Pavbhajiwala
     </author>
     <content src="index.html" />
+    <feature name="http://api.phonegap.com/1.0/notification"/>
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
+    <access origin="*.pushwoosh.com"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
