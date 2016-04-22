@@ -18,13 +18,10 @@
     </author>
     
     <content src="index.html" />
-    <gap:plugin name="cordova-plugin-whitelist" version="1" source="npm" />    
-
-    <preference name="android-build-tool" value="gradle" />
-    <plugin name="phonegap-plugin-push" source="npm">
-        <param name="937431864063" value="937431864063" />
-    </plugin>
-
+    <gap:plugin name="cordova-plugin-whitelist" version="1" source="npm" />        
+    <gap:plugin name="pushwoosh-cordova-plugin" version="3.0.1" source="npm"/>
+    <preference name="android-build-tool" value="gradle" />    
+    <feature name="http://api.phonegap.com/1.0/notification"/>
     <access origin="*" />
     <access origin="*.pushwoosh.com"/>
     <allow-intent href="http://*/*" />
